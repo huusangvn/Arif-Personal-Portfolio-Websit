@@ -1,0 +1,55 @@
+@use "../abstracts/colors" as cor;
+@use "../abstracts/mixin" as mix;
+/*PC*/
+@media screen and (min-width: 992px) {
+    .logo-mb,
+    .link-icon-mobile,
+    .toggle-menu {
+        display: none;
+    }
+}
+
+/*Tablet*/
+@media screen and (min-width: 768px) and (max-widt: 991.98px) {
+}
+
+/*Mobile*/
+@media screen and (max-width: 575.98px) {
+    .header-container {
+        width: 377px;
+        .header__inner {
+            justify-content: start;
+            .nav-pc,
+            .link-info,
+            .logo-pc,
+            .mail-contact {
+                display: none;
+            }
+            .logo-mb {
+                order: -1;
+                margin-left: 13px;
+            }
+
+            .toggle-menu,
+            .link-icon-mobile {
+                @include mix.flexCenter;
+                width: 32px;
+                height: 32px;
+                object-fit: cover;
+                border: 1px solid cor.$primary-color;
+                border-radius: 50%;
+            }
+            .link-icon-mobile {
+                margin-left: 239px;
+                margin-right: 10px;
+            }
+        }
+
+        .Rectangle-mobile {
+            margin-top: 15.5px;
+            width: 377px;
+            height: 1px;
+            background: #d6d3e2;
+        }
+    }
+}

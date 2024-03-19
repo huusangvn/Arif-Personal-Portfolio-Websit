@@ -1,0 +1,35 @@
+@use "../abstracts/colors" as clr;
+@use "../abstracts/mixin" as mix;
+.header {
+    margin-top: 20px;
+    &-container {
+        width: 1330px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .header__inner {
+            @include mix.flexCenter($jus: space-between);
+
+            .mail-contact {
+                @include mix.flexCenter;
+                .link-icon {
+                    margin-right: 10px;
+                    @include mix.flexCenter;
+                    width: 46px;
+                    height: 46px;
+                    object-fit: cover;
+                    border: 1px solid clr.$primary-color;
+                    border-radius: 50%;
+                }
+
+                .link-info {
+                    font-size: 2.2rem;
+                    font-weight: 500;
+                    line-height: 30px;
+                    color: clr.$primary-heading-color;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

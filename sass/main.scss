@@ -1,6 +1,6 @@
 /*Thành phần chung và reset*/
-@use "./base/";
+@use "./base";
 /*Các biến*/
-@use "./abstracts/";
+@use "./abstracts";
 /*Bố cục trang web*/
-@use "./layout/";
+@use "./layout";
