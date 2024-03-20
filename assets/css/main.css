@@ -150,12 +150,26 @@ body {
   font-family: "DM Sans", sans-serif;
 }
 
+button,
+input {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
 a {
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 23.44px;
   color: #51586a;
   text-decoration: none;
+}
+
+.section-desc {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 30px;
+  color: #51586a;
 }
 
 /*Các biến*/
@@ -1113,17 +1127,17 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
-.header-container .header__inner {
+.header__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.header-container .header__inner .mail-contact {
+.header__inner .mail-contact {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.header-container .header__inner .mail-contact .link-icon {
+.header__inner .mail-contact .link-icon {
   margin-right: 10px;
   display: flex;
   justify-content: center;
@@ -1134,12 +1148,88 @@ a {
   border: 1px solid #5d3bee;
   border-radius: 50%;
 }
-.header-container .header__inner .mail-contact .link-info {
+.header__inner .mail-contact .link-info {
   font-size: 2.2rem;
   font-weight: 500;
   line-height: 30px;
   color: #080415;
   text-decoration: underline;
+}
+
+.hero {
+  margin-top: 44px;
+}
+.hero .row {
+  align-items: center;
+}
+.hero-image {
+  position: relative;
+}
+.hero-image .img {
+  width: 514px;
+  height: 705px;
+  object-fit: cover;
+}
+.hero-image .img-bg {
+  position: absolute;
+  left: -180px;
+  bottom: 10px;
+  z-index: -1;
+}
+.hero-image .img-bg-2 {
+  position: absolute;
+  bottom: 0;
+  left: 1050px;
+}
+.hero .primary-title {
+  font-size: 8rem;
+  font-weight: 500;
+  line-height: 76px;
+  color: #080415;
+}
+.hero-desc {
+  margin-top: 20px;
+}
+.hero .hero-cta {
+  margin-top: 50px;
+}
+.hero .hero-cta .bnt-link {
+  margin-left: 30px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 30px;
+  color: #080415;
+  text-decoration: underline;
+}
+.hero .hero-contact {
+  margin-top: 104px;
+  display: flex;
+  align-items: center;
+}
+.hero .hero-contact .content {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 30px;
+  color: #51586a;
+}
+.hero .hero-contact .contact-links {
+  display: flex;
+  margin-left: 15px;
+  margin-right: -20px;
+}
+.hero .hero-contact .contact-links .link {
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #080415;
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+}
+.hero .hero-contact .contact-links .link:hover {
+  transform: translateY(-10px);
 }
 
 /*PC*/
@@ -1156,14 +1246,14 @@ a {
   .header-container {
     width: 377px;
   }
+  .header-container .nav-pc,
+  .header-container .link-info,
+  .header-container .logo-pc,
+  .header-container .mail-contact {
+    display: none;
+  }
   .header-container .header__inner {
     justify-content: start;
-  }
-  .header-container .header__inner .nav-pc,
-  .header-container .header__inner .link-info,
-  .header-container .header__inner .logo-pc,
-  .header-container .header__inner .mail-contact {
-    display: none;
   }
   .header-container .header__inner .logo-mb {
     order: -1;
@@ -1190,6 +1280,81 @@ a {
     height: 1px;
     background: #d6d3e2;
   }
+  .hero .row {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .hero-image {
+    margin: 20px auto 0;
+  }
+  .hero-image .img {
+    width: 259px;
+    height: 355px;
+  }
+  .hero-image .img-bg {
+    position: absolute;
+    left: -115px;
+    bottom: 0;
+    z-index: -1;
+    width: 543.71px;
+    height: 402.15px;
+  }
+  .hero-image .img-bg-2 {
+    display: none;
+  }
+  .hero .primary-title {
+    font-size: 42px;
+    line-height: 50px;
+  }
+  .hero-desc {
+    width: 318px;
+    font-size: 1.6rem;
+    line-height: 26px;
+  }
+  .hero .hero-cta {
+    margin-top: 30px;
+  }
+  .hero .hero-cta .btn {
+    width: 147px;
+    height: 55px;
+    font-size: 1.6rem;
+    line-height: 30px;
+  }
+  .hero .hero-cta .bnt-link {
+    margin-left: 40px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 30px;
+  }
+  .hero .hero-contact {
+    margin-top: 30px;
+  }
+  .hero .hero-contact .content {
+    font-size: 1.4rem;
+    line-height: 20px;
+  }
+  .hero .hero-contact .contact-links {
+    margin-left: 10px;
+    margin-right: 15.5px;
+  }
+  .hero .hero-contact .contact-links .link {
+    margin-right: 15.5px;
+    width: 31px;
+    height: 31px;
+  }
+  .hero .hero-contact .contact-links .link .img-conctact {
+    width: 12.4px;
+    height: 7.75px;
+  }
+}
+.btn {
+  width: 170px;
+  height: 62px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 30px;
+  color: #fdfdfd;
+  background: #5d3bee;
 }
 
 /*# sourceMappingURL=main.css.map */

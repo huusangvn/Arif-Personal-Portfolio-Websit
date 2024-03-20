@@ -15,10 +15,23 @@ body {
 }
 
 //
+button,
+input {
+    border: none;
+    outline: none;
+    background: transparent;
+}
 a {
     font-size: 1.8rem;
     font-weight: 400;
     line-height: 23.44px;
     color: clr.$primary-desc-color;
     text-decoration: none;
+}
+
+.section-desc {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 30px;
+    color: clr.$primary-desc-color;
 }

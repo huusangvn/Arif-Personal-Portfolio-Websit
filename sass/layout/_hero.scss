@@ -1,0 +1,77 @@
+@use "../abstracts/colors" as clr;
+@use "../abstracts/mixin" as mix;
+.hero {
+    margin-top: 44px;
+    .row {
+        align-items: center;
+    }
+    &-image {
+        position: relative;
+        .img {
+            width: 514px;
+            height: 705px;
+            object-fit: cover;
+        }
+        .img-bg {
+            position: absolute;
+            left: -180px;
+            bottom: 10px;
+            z-index: -1;
+        }
+        .img-bg-2 {
+            position: absolute;
+            bottom: 0;
+            left: 1050px;
+        }
+    }
+    .primary-title {
+        font-size: 8rem;
+        font-weight: 500;
+        line-height: 76px;
+        color: clr.$primary-heading-color;
+    }
+    &-desc {
+        margin-top: 20px;
+    }
+
+    .hero-cta {
+        margin-top: 50px;
+        .bnt-link {
+            margin-left: 30px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 30px;
+            color: clr.$primary-heading-color;
+            text-decoration: underline;
+        }
+    }
+
+    .hero-contact {
+        margin-top: 104px;
+        display: flex;
+        align-items: center;
+        .content {
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: 30px;
+            color: clr.$primary-desc-color;
+        }
+        .contact-links {
+            display: flex;
+            margin-left: 15px;
+            margin-right: -20px;
+            .link {
+                margin-right: 20px;
+                @include mix.flexCenter(center, center);
+                width: 40px;
+                height: 40px;
+                border: 1px solid clr.$primary-heading-color;
+                border-radius: 50%;
+                transition: transform 0.5s ease;
+                &:hover {
+                    transform: translateY(-10px);
+                }
+            }
+        }
+    }
+}

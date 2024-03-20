@@ -1,0 +1,10 @@
+@use "../abstracts/colors" as cor;
+.btn {
+    width: 170px;
+    height: 62px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 30px;
+    color: #fdfdfd;
+    background: cor.$primary-color;
+}
